@@ -14,7 +14,7 @@
     </parent>
     <groupId>icu.develop</groupId>
     <artifactId>mount-l2cache-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>mount-l2cache-parent</name>
     <description>mount-l2cache-parent</description>
     <properties>
