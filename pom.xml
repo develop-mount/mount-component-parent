@@ -6,6 +6,7 @@
     <modules>
         <module>mount-l2cache-starter</module>
         <module>mount-limiter-starter</module>
+        <module>mount-lock-starter</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
