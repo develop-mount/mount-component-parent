@@ -13,10 +13,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>icu.develop</groupId>
-    <artifactId>mount-l2cache-parent</artifactId>
+    <artifactId>mount-component-parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
-    <name>mount-l2cache-parent</name>
-    <description>mount-l2cache-parent</description>
+    <name>mount-component-parent</name>
+    <description>mount-component-parent</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
