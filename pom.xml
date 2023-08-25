@@ -30,6 +30,7 @@
         </dependency>
     </dependencies>
 
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -37,17 +38,10 @@
         </license>
     </licenses>
 
-    <scm>
-        <tag>main</tag>
-        <connection>scm:git@github.com:develop-mount/mount-l2cache-parent.git</connection>
-        <developerConnection>scm:git@github.com:develop-mount/mount-l2cache-parent.git</developerConnection>
-        <url>git@github.com:develop-mount/mount-l2cache-parent.git</url>
-    </scm>
-
     <developers>
         <developer>
             <name>develop-mount</name>
-            <email>237242115@qq.com</email>
+            <email>scstlinfeng@aliyun.com</email>
             <url>https://github.com/develop-mount</url>
             <timezone>+8</timezone>
             <roles>
@@ -56,9 +50,21 @@
         </developer>
     </developers>
 
+    <scm>
+        <tag>main</tag>
+        <connection>scm:git@github.com:develop-mount/mount-component-parent.git</connection>
+        <developerConnection>scm:git@github.com:develop-mount/mount-component-parent.git</developerConnection>
+        <url>git@github.com:develop-mount/mount-component-parent.git</url>
+    </scm>
+
+    <issueManagement>
+        <system>Github Issue</system>
+        <url>https://github.com/develop-mount/mount-component-parent/issues</url>
+    </issueManagement>
+
     <profiles>
         <profile>
-            <id>sonatype-oss-release</id>
+            <id>release</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -68,14 +74,12 @@
             </properties>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>sonatype-nexus-snapshots</id>
-                    <name>Sonatype Nexus Snapshots</name>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
-                    <id>sonatype-nexus-staging</id>
-                    <name>Nexus Release Repository</name>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <id>ossrh</id>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
             <build>
@@ -88,40 +92,18 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
+                        <version>3.2.1</version>
                         <executions>
                             <execution>
-                                <phase>compile</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
-                        <configuration>
-                            <show>private</show>
-                            <nohelp>true</nohelp>
-                            <charset>UTF-8</charset>
-                            <encoding>UTF-8</encoding>
-                            <docencoding>UTF-8</docencoding>
-                        </configuration>
-                        <executions>
-                            <execution>
+                                <id>oss</id>
                                 <phase>package</phase>
                                 <goals>
-                                    <goal>jar</goal>
+                                    <goal>jar-no-fork</goal>
                                 </goals>
                             </execution>
                         </executions>
                     </plugin>
+                    <!-- Gpg Signature -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -147,8 +129,8 @@
                         <version>1.6.7</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>sonatype-nexus-staging</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
