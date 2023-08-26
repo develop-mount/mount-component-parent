@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: DEV
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  redis:
+    host: 127.0.0.1
+    port: 6379
+#    password: vevor123456
+#    database: 2
+    lettuce:
+      pool:
+        #连接池最大连接数，使用负数表示没有限制，默认为8
+        max-active: 8
+        #连接池最大阻塞等待时间，使用负数表示没有限制，默认为-1
+        max-wait: -1
+        #连接池最大空闲链接数，默认为8
+        max-idle: 8
+        #连接池最小空闲链接数，默认为0
+        min-idle: 0
+  aop:
+    auto: true
+
+l2cache:
+  items:
+    demo:
+      ttl: 120
+  ttl: 120
