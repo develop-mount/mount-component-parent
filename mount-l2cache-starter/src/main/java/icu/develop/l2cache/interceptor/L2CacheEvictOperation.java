@@ -20,7 +20,7 @@ public class L2CacheEvictOperation extends L2CacheOperation {
     /**
      * Create a new {@link L2CacheOperation} instance from the given builder.
      *
-     * @param b
+     * @param b 构造器
      * @since 4.3
      */
     protected L2CacheEvictOperation(Builder b) {

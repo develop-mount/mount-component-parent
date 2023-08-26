@@ -17,19 +17,33 @@ import java.lang.annotation.*;
 @Inherited
 @Documented
 public @interface L2CacheEvict {
+    /**
+     * 缓存名称
+     *
+     * @return 缓存名称
+     */
     @AliasFor("cacheNames")
     String[] value() default {L2CacheConstant.DEFAULT_CACHE_NAME};
 
+    /**
+     * 缓存名称
+     *
+     * @return 缓存名称
+     */
     @AliasFor("value")
     String[] cacheNames() default {L2CacheConstant.DEFAULT_CACHE_NAME};
 
     /**
      * 缓存key的类型：1.固定设值；2.参数组值
+     *
+     * @return 缓存类型 {@link CacheKeyType}
      */
     CacheKeyType cacheKeyType() default CacheKeyType.FIX;
 
     /**
      * 缓存的key，cacheType=固定设值；此值生效
+     *
+     * @return 缓存key
      */
     String cacheKey() default "";
 

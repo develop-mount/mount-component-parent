@@ -30,7 +30,7 @@ public class L2CacheOperation {
 
     /**
      * Create a new {@link L2CacheOperation} instance from the given builder.
-     *
+     * @param b 构造器
      * @since 4.3
      */
     protected L2CacheOperation(Builder b) {
@@ -78,6 +78,7 @@ public class L2CacheOperation {
         /**
          * Return an identifying description for this caching operation.
          * <p>Available to subclasses, for inclusion in their {@code toString()} result.
+         * @return 字符串
          */
         protected StringBuilder getOperationDescription() {
             StringBuilder result = new StringBuilder(getClass().getSimpleName());

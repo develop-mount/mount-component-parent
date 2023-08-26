@@ -31,8 +31,8 @@ public class RedisLimiterProceeding {
      * @param count     限制的数量
      * @param proceeding     执行方法逻辑
      * @param <T>            泛型
-     * @return
-     * @throws Throwable
+     * @return 返回执行后的对象
+     * @throws Throwable 异常
      */
     public <T> T limiter(String limiterKey, long timeout, long count, LimiterProceeding<T> proceeding) throws Throwable {
 

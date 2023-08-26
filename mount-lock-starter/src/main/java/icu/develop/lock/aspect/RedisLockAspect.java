@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
  * @author ：linfeng
  * description ：redis分布式锁 AOP
  * program ：bmp-prm
- * @date ：Created in 2022/8/30 10:17
+ * @since ：Created in 2022/8/30 10:17
  */
 @Slf4j
 @Aspect
@@ -44,7 +44,7 @@ public class RedisLockAspect {
      * @param joinPoint {@link ProceedingJoinPoint}
      * @param redisLock {@link RedisLock}
      * @return 执行后的对象
-     * @throws Throwable
+     * @throws Throwable 异常
      */
     @Around("pointcut(redisLock)")
     public Object around(ProceedingJoinPoint joinPoint, RedisLock redisLock) throws Throwable {

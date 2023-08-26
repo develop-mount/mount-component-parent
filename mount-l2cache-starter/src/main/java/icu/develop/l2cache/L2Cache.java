@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 public interface L2Cache {
 
     /**
-     * @return
+     * @return 缓存名称
      */
     String name();
 
@@ -30,6 +30,7 @@ public interface L2Cache {
      * @param key  key
      * @param type type
      * @return 值
+     * @param <T> 类型
      */
     <T> T get(String key, Type type);
 
@@ -38,6 +39,7 @@ public interface L2Cache {
      *
      * @param key   key
      * @param value 值
+     * @param <T> 类型
      */
     <T> void put(String key, T value);
 

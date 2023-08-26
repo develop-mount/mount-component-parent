@@ -35,6 +35,7 @@ public class RedisLockProceeding {
      * @param proceeding 锁定后执行的方法
      * @param <T>        泛型
      * @return 执行后的对象
+     * @throws Throwable 异常
      */
     public <T> T locked(String lockKey, long waitTime, long leaseTime, LockProceeding<T> proceeding) throws Throwable {
 

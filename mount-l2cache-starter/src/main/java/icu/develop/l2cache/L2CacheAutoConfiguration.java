@@ -98,6 +98,7 @@ public class L2CacheAutoConfiguration {
     /**
      * aop
      *
+     * @param l2CacheInterceptor 二级缓存拦截器
      * @return Advisor对象
      */
     @Bean

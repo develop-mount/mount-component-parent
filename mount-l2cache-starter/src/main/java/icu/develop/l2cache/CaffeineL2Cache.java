@@ -82,6 +82,8 @@ public class CaffeineL2Cache implements L2Cache {
      * 反序列号
      *
      * @param source 字符串
+     * @param type   类型
+     * @param <T>    泛型
      * @return 对象
      */
     private static <T> T deserialize(@Nullable Object source, Type type) {
@@ -104,7 +106,7 @@ public class CaffeineL2Cache implements L2Cache {
          * 构造缓存
          *
          * @param duration 有效时间
-         * @param <T>
+         * @param <T>      类型
          * @return 缓存
          */
         public static <T> Cache<String, T> cache(long duration) {

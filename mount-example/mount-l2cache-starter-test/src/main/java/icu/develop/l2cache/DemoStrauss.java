@@ -1,6 +1,7 @@
 package icu.develop.l2cache;
 
-import com.vevor.prm.common.cache.interceptor.L2CacheStrategy;
+
+import icu.develop.l2cache.interceptor.L2CacheStrategy;
 
 /**
  * Description:

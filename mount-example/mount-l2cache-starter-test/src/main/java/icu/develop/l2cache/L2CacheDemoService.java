@@ -1,9 +1,10 @@
 package icu.develop.l2cache;
 
-import com.vevor.prm.common.cache.annotation.CacheKeyType;
-import com.vevor.prm.common.cache.annotation.L2CacheEvict;
-import com.vevor.prm.common.cache.annotation.L2CachePut;
-import com.vevor.prm.common.cache.annotation.L2Cacheable;
+
+import icu.develop.l2cache.annotation.CacheKeyType;
+import icu.develop.l2cache.annotation.L2CacheEvict;
+import icu.develop.l2cache.annotation.L2CachePut;
+import icu.develop.l2cache.annotation.L2Cacheable;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

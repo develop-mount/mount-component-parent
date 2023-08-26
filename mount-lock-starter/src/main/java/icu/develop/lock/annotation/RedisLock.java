@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  *
  * @author ：linfeng
  * program ：bmp-prm
- * @date 2022年8月30日 09点46分
+ * @since  2022年8月30日 09点46分
  */
 @Documented
 @Target({ElementType.METHOD})
@@ -23,11 +23,13 @@ public @interface RedisLock {
 
     /**
      * 等待获取锁定的实际，单位秒
+     * @return 等待获取锁的时间
      */
     long waitTime() default 2;
 
     /**
      * 锁定时间，单位：秒 ；默认：长期
+     * @return 锁定时间
      */
     long lockedTime() default -1;
 }

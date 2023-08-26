@@ -39,7 +39,7 @@ public @interface L2Cacheable {
 
     /**
      * FIX: 固定设置; REQUEST_ARGS: 根据请求参数拼值;EXPRESSION: EL表达式
-     * @return 缓存类型 {@see CacheKeyType}
+     * @return 缓存类型 {@link  CacheKeyType}
      */
     CacheKeyType cacheKeyType() default CacheKeyType.FIX;
 

@@ -23,8 +23,7 @@ import org.springframework.util.StringUtils;
 /**
  * @author ：jwl
  * @version ：1.0
- * @description ： Redisson 配置
- * @date ：2022/8/22 20:25
+ * @since  ：2022/8/22 20:25
  */
 @Configuration
 @Import({RedisAutoConfiguration.class, AopAutoConfiguration.class})
