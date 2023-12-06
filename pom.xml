@@ -17,7 +17,7 @@
     </parent>
     <groupId>icu.develop</groupId>
     <artifactId>mount-component-parent</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <name>mount-component-parent</name>
     <description>mount-component-parent</description>
     <properties>
