@@ -1,6 +1,7 @@
 package icu.develop.lock;
 
 import icu.develop.lock.constant.RedisConstant;
+import icu.develop.lock.exception.RedisLockException;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -51,12 +52,12 @@ public class RedisLockProceeding {
                     lock.unlock();
                 }
             } else {
-                throw new RuntimeException("不能频繁操作，请稍后重试");
+                throw new RedisLockException("不能频繁操作，请稍后重试");
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             log.warn("不能频繁操作:{}", e.getLocalizedMessage(), e);
-            throw new RuntimeException("不能频繁操作，请稍后重试");
+            throw new InterruptedException("不能频繁操作，请稍后重试");
         }
     }
 

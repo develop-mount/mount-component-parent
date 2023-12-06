@@ -1,5 +1,6 @@
 package icu.develop.limiter;
 
+import icu.develop.limiter.exception.LimiterException;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.*;
 
@@ -43,7 +44,7 @@ public class RedisLimiterProceeding {
             // 在限制内，执行方法逻辑
             return proceeding.proceed();
         } else {
-            throw new RuntimeException("超过限定速率,不能频繁操作,请稍后重试");
+            throw new LimiterException("超过限定速率,不能频繁操作,请稍后重试");
         }
     }
 
